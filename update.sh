@@ -1,3 +1,6 @@
+# Count current lines
+wc -l data/dailymail.txt
+
 # Use Wombat to download latest sidebar headlines
 ruby ./dailymail.rb > tmp/sidebar.txt
 
@@ -9,6 +12,10 @@ cat tmp/current.txt tmp/sidebar.txt > tmp/latest.txt
 
 # Remove any duplicates and update the set
 awk '!seen[$0]++' tmp/latest.txt > data/dailymail.txt
+
+# Create alternative paragraph line-wrap
+sed 's/$/.\'$'\n/' data/dailymail.txt > tmp/sentences.txt
+fold -w 80 -s tmp/sentences.txt > data/dailymail-paragraph.txt
 
 # Remote temporary work files
 rm -r tmp/*.txt
