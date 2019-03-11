@@ -1,3 +1,6 @@
+# Check dataset is most current
+git pull
+
 # Count current lines
 wc -l data/dailymail.txt
 
