@@ -23,7 +23,12 @@ rm -r tmp/*.txt
 # Show the new number of headlines
 wc -l data/dailymail.txt
 
+# Add updated files
 git add data/dailymail.txt
 git add data/dailymail-paragraph.txt
+
+# Commit with message
 git commit -m "Added additional headlines"
+
+# Push to master
 git push
