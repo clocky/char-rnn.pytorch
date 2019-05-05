@@ -163,3 +163,7 @@ dmypy.json
 .history
 
 # End of https://www.gitignore.io/api/macos,python,visualstudiocode
+
+
+# Training data
+*.pt
