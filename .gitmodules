@@ -1,0 +1,3 @@
+[submodule "dailyfail"]
+	path = dailyfail
+	url = https://github.com/clocky/dailyfail
